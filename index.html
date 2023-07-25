@@ -222,11 +222,6 @@
             color: #fff;
         }
 
-        button {
-            background: none;
-            border: none;
-        }
-
         .cta-buy {
             border-right: solid #fff;
             width: 50px;
@@ -246,6 +241,22 @@
             align-items: center;
             border: 1px none;
             display: flex;
+        }
+
+        /* Style for Nvbar Buttom Mobile */
+        .conttainer-nbm {
+            display: flex;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            align-items: center;
+            box-shadow: 0px -4px 4px #00000040;
+            justify-content: center;
+        }
+
+        .container-wrapper-nbm {
+            align-items: center;
+            background-color: var(--primary-color);
         }
 
         @media screen and (max-width:1400px) {
@@ -333,21 +344,6 @@
                 border-right: none;
                 width: 20px;
             }
-        }
-
-        /* Style for Nvbar Buttom Mobile */
-        .conttainer-nbm {
-            display: inline-flex;
-            position: sticky;
-            bottom: 0px;
-            align-items: center;
-            box-shadow: 0px -4px 4px #00000040;
-            justify-content: center;
-        }
-
-        .container-wrapper-nbm {
-            align-items: center;
-            background-color: var(--primary-color);
         }
     </style>
 </head>
