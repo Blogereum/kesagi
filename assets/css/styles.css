@@ -264,6 +264,7 @@ button {
 
 .rev__link {
     color: #fff;
+    width: fit-content;
 }
 
 .rev__devide {
@@ -279,6 +280,7 @@ button {
 
 .rev__name {
     color: #fff;
+    width: fit-content;
 }
 
 .nav__icon {
@@ -556,6 +558,54 @@ button {
     .nav {
         padding: 0 10px;
         width: 100%;
+    }
+
+    .rev__menu {
+        align-items: center;
+        align-self: stretch;
+        display: flex;
+        flex: 0 0 auto;
+        gap: 2px;
+        position: relative;
+        padding: 2px 0px;
+        width: 100%;
+        height: 18px;
+    }
+
+    .rev__list {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        display: flex;
+        flex: 0 0 auto;
+        gap: 2px;
+        position: relative;
+        padding: 2px 0px;
+        width: 100%;
+        color: #fff;
+    }
+
+    .rev__item {
+        margin-left: 4px;
+    }
+
+    .rev__link {
+        color: #fff;
+    }
+
+    .rev__devide {
+        border-style: solid;
+        border-color: #fff;
+        height: 16px;
+        border-width: 1px;
+    }
+
+    .rev__icon {
+        fill: #fff;
+    }
+
+    .rev__name {
+        color: #fff;
     }
 
     .nav__menu {
