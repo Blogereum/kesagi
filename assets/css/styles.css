@@ -513,7 +513,8 @@ button {
 /*sm 576px*/
 @media screen and (max-width: 576px) {
     .nav {
-        padding: 0 0;
+        padding: 0 15px;
+        width: 100%;
     }
 
     .nav__menu {
@@ -553,7 +554,8 @@ button {
 /*xs 360px*/
 @media screen and (max-width: 360px) {
     .nav {
-        padding: 0 10;
+        padding: 0 10px;
+        width: 100%;
     }
 
     .nav__menu {
