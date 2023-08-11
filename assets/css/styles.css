@@ -264,7 +264,6 @@ button {
 
 .rev__link {
     color: #fff;
-    width: fit-content;
 }
 
 .rev__devide {
@@ -280,7 +279,6 @@ button {
 
 .rev__name {
     color: #fff;
-    width: fit-content;
 }
 
 .nav__icon {
@@ -581,7 +579,7 @@ button {
         gap: 2px;
         position: relative;
         padding: 2px 0px;
-        width: 100%;
+        width: fit-content;
         color: #fff;
     }
 
