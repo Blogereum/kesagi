@@ -571,7 +571,9 @@ button {
         width: 100%;
     }
 
-
+    .rev__list {
+        gap: 2px;
+    }
 
     .nav__menu {
         position: fixed;
