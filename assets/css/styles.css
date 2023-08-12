@@ -572,7 +572,7 @@ button {
     }
 
     .rev__list {
-        gap: 2px;
+        gap: 0px;
     }
 
     .nav__menu {
