@@ -571,13 +571,8 @@ button {
         width: 100%;
     }
 
-    .rev__menu {
-        width: 260px;
-    }
-
-    .rev__list {
-        gap: 0px;
-        padding: 0;
+    .brand__assets {
+        width: 100%;
     }
 
     .nav__menu {
