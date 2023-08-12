@@ -572,7 +572,7 @@ button {
     }
 
     .rev__menu {
-        width: fit-content;
+        width: 100%;
     }
 
     .rev__list {
