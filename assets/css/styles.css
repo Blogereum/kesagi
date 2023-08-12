@@ -571,8 +571,13 @@ button {
         width: 100%;
     }
 
+    .rev__menu {
+        width: fit-content;
+    }
+
     .rev__list {
         gap: 0px;
+        padding: 0;
     }
 
     .nav__menu {
