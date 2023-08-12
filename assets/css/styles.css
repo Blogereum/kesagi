@@ -532,6 +532,19 @@ button {
         align-self: center;
     }
 
+    .rev__menu {
+        align-items: center;
+        align-self: stretch;
+        border: 1px none;
+        display: flex;
+        gap: 4px;
+        padding: 2px 0px;
+    }
+
+    .rev__item {
+        height: 16px;
+    }
+
     .menu__list {
         align-items: stretch;
     }
