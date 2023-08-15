@@ -135,12 +135,104 @@ a {
 img {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 button {
     border: none;
     background: none;
     cursor: pointer;
+}
+
+/* roboto/typography/headline1 */
+h1 {
+    font-family: var(--font-family-roboto);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 44px;
+    /* 122.222% */
+    margin: 12px;
+}
+
+/* roboto/typography/headline2 */
+h2 {
+    font-family: var(--font-family-roboto);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+    /* 125% */
+    margin: 12px;
+}
+
+/* roboto/typography/headline3 */
+h3 {
+    font-family: var(--font-family-roboto);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 36px;
+    /* 128.571% */
+    margin: 12px;
+}
+
+/* roboto/typography/headline4 */
+h4 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 32px;
+    /* 133.333% */
+    margin: 12px;
+}
+
+/* roboto/typography/headline5 */
+h5 {
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 28px;
+    /* 127.273% */
+    margin: 12px;
+}
+
+/* roboto/typography/headline6 */
+h6 {
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    /* 133.333% */
+    margin: 12px;
+}
+
+/* roboto/typography/body1 */
+p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.5px;
+    margin: 12px;
+}
+
+blockquote {
+    border-left-color: var(--primary-color);
+    border-left-style: solid;
+    background-color: lightgrey;
+    border-width: 8px;
+    padding: 1px 8px;
+    margin: 12px;
+}
+
+main {
+    padding: 0px 60px;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -172,7 +264,7 @@ button {
     display: flex;
     flex: 1;
     flex-grow: 1;
-    width: 100%;
+    width: 1400px;
     justify-content: space-between;
     padding: 0 60px;
     position: relative;
@@ -271,7 +363,7 @@ button {
 .rev__devide {
     border-style: solid;
     border-color: #fff;
-    height: 16px;
+    height: 10px;
     border-width: 1px;
 }
 
@@ -396,6 +488,7 @@ button {
 }
 
 
+
 /*=============== BREAKPOINTS ===============*/
 /*xl 992px*/
 @media screen and (max-width: 1200px) {
@@ -490,8 +583,12 @@ button {
         margin-bottom: 50px;
     }
 
+    main {
+        padding: 0px 60px;
+    }
+
     .nav {
-        padding: 0 0;
+        padding: 0 40px;
     }
 
     .nav__menu {
@@ -540,9 +637,13 @@ button {
 
 /*xxs320*/
 @media screen and (min-width: 270px) {
+    main {
+        padding: 0px 5px;
+    }
+
     .nav {
         display: flex;
-        padding: 5px 5px;
+        padding: 0px 5px;
         width: 100%;
     }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:kesagi="https://www.kesagi.blogereum.com/index.html" lang="ID, in">
+<html xmlns:kesagi="https://www.kesagi.blogereum.com/index.html" lang="in_ID">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#ECBB10">
 
     <!--=============== LINK CANONICAL AMP ===============-->
-    <link rel="amphtml" href="https://kesagi.blogereum.com/index-amp.html">
+    <link rel="amphtml" href="https://www.kesagi.blogereum.com/index-amp.html">
 
     <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="assets/img/jual-madu-kesagi-logo.png" type="image/x-icon">
@@ -33,7 +33,7 @@
     <!--  Essential META Tags -->
     <meta property="og:title" content="Jual Kesagi Terdekat">
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.kesagi.blogereum.com/assets/img/Jual-Kesagi-Terdekat.jpg">
+    <meta property="og:image" content="https://www.kesagi.blogereum.com/assets/img/jual-kesagi-terdekat.jpg">
     <meta property="og:url" content="https://www.kesagi.blogereum.com/index.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:determiner" content="kesagi" />
@@ -54,7 +54,7 @@
 
 <body>
     <!--=============== HEADER ===============-->
-    <header class="header header__top" id="header">
+    <header id="header" class="header header__top">
         <nav class="nav" itemscope itemtype="https://schema.org/Product">
 
             <!--Brand Assets-->
@@ -112,7 +112,7 @@
             </div>
 
             <!--Nav Menu List-->
-            <div class="nav__menu">
+            <div id="nav__menu" class="nav__menu">
                 <ul class="menu__list">
                     <li class="menu__item">
                         <a href="#home" class="nav__link">
@@ -175,8 +175,8 @@
             </div>
 
             <!--Call to Action Nav-->
-            <div class="nav__cta" id="nav__cta">
-                <button class="nav__btn">
+            <div id="nav__cta" class="nav__cta">
+                <button type="button" class="nav__btn">
                     <a href="#" class="btn__link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path class="btn__icon"
@@ -207,7 +207,7 @@
     </header>
 
     <!--=============== Button CTA ===============-->
-    <button class="btn__act">
+    <button type="button" class="btn__act">
         <a href="#" class="btn__link-vert">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_705_701)" class="btn__icon-vert">
@@ -244,16 +244,20 @@
     <main>
         <!--=============== HOME ===============-->
         <section id="home" class="home">
-            <article>
+            <article class="col">
                 <h1>
                     Jual Kesagi Beli Minimal 2 Box Hari Ini Dapat Potongan Harga Langsung
                 </h1>
-                <img src="assets/img/jual-kesagi-terdekat-official.png" alt="">
-                <p>
+                <figure>
+                    <img src="assets/img/jual-kesagi-terdekat-official.png" alt="Jual Kesagi Terdekat">
+                    <figcaption>Jual Kesagi Terdekat</figcaption>
+                </figure>
+
+                <p title="jual kesagi">
                     Jual Madu Kesagi Terdekat Official Resmi Promo Khusus Hari Ini untuk Pembelian Kesagi Minimal 2 Box.
                 </p>
 
-                <q>
+                <blockquote cite="https://www.kesagi.blogereum.com">
                     <h2>
                         Harga Kesagi Terbaru
                     </h2>
@@ -264,19 +268,21 @@
                         <span>
                             Rp. 250.000
                         </span>
-
                     </p>
+
                     <p>
                         <span>
                             Harga Promo
                         </span>
                         <span> Rp. 199.000</span>
                     </p>
-                </q>
+                </blockquote>
+
+
                 <p>
                     Jual Madu Kesagi Original Isi 5 Sachet, Stok Kesagi Terbaru, Siap Kirim Seluruh Wilayah Indonesia
                 </p>
-                <q>
+                <blockquote>
                     <h2>Promo Hari Ini Khusus Pembelian Minimal 2 Box Madu Kesagi</h2>
                     <p>
                         <span>
@@ -293,16 +299,21 @@
                         </span>
                         <span> Rp. 350.000</span>
                     </p>
-                </q>
+                </blockquote>
             </article>
 
         </section>
         <!--=============== ABOUT ===============-->
+        <section id="about" class="about">
+
+        </section>
 
         <!--=============== PRODUCT ===============-->
     </main>
 
     <!--=============== FOOTER ===============-->
+    <div class='sk-ww-google-business-profile' data-embed-id='180635'></div>
+    <script src='https://widgets.sociablekit.com/google-business-profile/widget.js' async defer></script>
 </body>
 
 </html>
