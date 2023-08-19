@@ -12,6 +12,9 @@
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js">
     </script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
 
     <!--Viewport-->
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -372,7 +375,7 @@
         }
 
         main {
-            padding: 0px 60px;
+            padding: 20px 60px;
             margin-top: 80px;
         }
 
@@ -460,8 +463,8 @@
         .nav__img {
             width: 50px;
             /*border-radius: 50%;
-        border-color: #fff;
-        border-style: solid;*/
+    border-color: #fff;
+    border-style: solid;*/
         }
 
         .name__midle {
@@ -624,6 +627,7 @@
             right: 0;
             width: 168px;
             height: 40px;
+            z-index: 4;
         }
 
         .btn__link-vert {
@@ -671,7 +675,7 @@
         /*xl 1200px*/
         @media screen and (max-width: 1200px) {
             .nav {
-                padding: 0 40px;
+                padding: 20px;
                 width: 100%;
             }
 
@@ -688,7 +692,7 @@
         /*lg 992px*/
         @media screen and (max-width: 992px) {
             main {
-                padding: 25px;
+                padding: 20px;
             }
 
             .nav {
@@ -706,7 +710,7 @@
                 justify-content: center;
                 display: flex;
                 /*gap: 2px;
-                    padding: 4px 0 4px 0;*/
+            padding: 4px 0 4px 0;*/
             }
 
             .nav__list {
@@ -733,6 +737,7 @@
 
             main {
                 padding: 20px;
+                margin-bottom: 50px;
             }
 
             .nav {
@@ -792,6 +797,11 @@
                 padding: 8px;
                 border: 1px;
                 align-items: center;
+            }
+
+            .widget__gbp {
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -1169,6 +1179,19 @@
 
         <!--=============== PRODUCT ===============-->
     </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer>
+
+        <!-- Ref: https://amp.dev/documentation/components/amp-iframe/ -->
+        <amp-iframe width="1400px" height="503.328px" sandbox="allow-scripts allow-same-origin" layout="responsive"
+            frameborder="0" src="https://widgets.sociablekit.com/google-business-profile/iframe/180635"
+            class="widget__gbp">
+        </amp-iframe>
+
+
+
+    </footer>
 
 </body>
 
