@@ -14,6 +14,7 @@
     </script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
 
 
     <!--Viewport-->
@@ -64,6 +65,10 @@
     <!--  Non-Essential, But Required for Analytics -->
     <meta property="fb:app_id" content="your_app_id" />
     <meta name="twitter:site" content="@website-username">
+
+    <!-- AMP Analytics -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
 
     <style amp-boilerplate>
         body {
@@ -382,6 +387,7 @@
         s {
             text-decoration: line-through red;
         }
+
 
         /*=============== REUSABLE CSS CLASSES ===============*/
 
@@ -896,6 +902,10 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager -->
+    <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-KQC73X8N&gtm.url=SOURCE_URL"
+        data-credentials="include"></amp-analytics>
+
     <!--=============== HEADER ===============-->
     <header id="header" class="header header__top">
         <nav class="nav" itemscope itemtype="https://schema.org/Product">
@@ -956,19 +966,20 @@
 
             <!--Nav Menu List-->
             <div id="nav__menu" class="nav__menu">
-                <ul class="menu__list">
-                    <li class="menu__item">
-                        <a href="#home" class="nav__link">
+                <ul class="menu__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li class="menu__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="#home" class="nav__link" itemprop="item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path class="nav__icon"
                                     d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z">
                                 </path>
                             </svg>
-                            <span class="nav__name button-font">Beranda</span>
+                            <span class="nav__name button-font" itemprop="name">Beranda</span>
+                            <meta itemprop="position" content="1" />
                         </a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#about" class="nav__link">
+                    <li class="menu__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="#about" class="nav__link" itemprop="item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path class="nav__icon"
                                     d="M19 2H9c-1.103 0-2 .897-2 2v5.586l-4.707 4.707A1 1 0 0 0 3 16v5a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2zm-8 18H5v-5.586l3-3 3 3V20zm8 0h-6v-4a.999.999 0 0 0 .707-1.707L9 9.586V4h10v16z">
@@ -976,33 +987,36 @@
                                 <path class="nav__icon"
                                     d="M11 6h2v2h-2zm4 0h2v2h-2zm0 4.031h2V12h-2zM15 14h2v2h-2zm-8 1h2v2H7z"></path>
                             </svg>
-                            <span class="nav__name button-font">About Us</span>
+                            <span class="nav__name button-font" itemprop="name">About Us</span>
+                            <meta itemprop="position" content="2" />
                         </a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#product" class="nav__link">
+                    <li class="menu__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="#product" class="nav__link" itemprop="item">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path class="nav__icon"
                                     d="M15.75 0.0234375L24 4.14844V13.3477L22.5 12.5977V5.82422L16.5 8.82422V11.8477L15 12.5977V8.82422L8.99998 5.82422V8.48438L7.49998 7.73438V4.14844L15.75 0.0234375ZM15.75 7.52344L17.8242 6.48047L12.3984 3.375L9.92576 4.61719L15.75 7.52344ZM19.4414 5.68359L21.5742 4.61719L15.75 1.69922L14.0039 2.57812L19.4414 5.68359ZM13.5 13.3477L12 14.0977V14.0859L7.49998 16.3359V21.668L12 19.4062V21.0938L6.74998 23.7188L-2.28882e-05 20.332V12.4102L6.74998 9.03516L13.5 12.4102V13.3477ZM5.99998 21.668V16.3359L1.49998 14.0859V19.4062L5.99998 21.668ZM6.74998 15.0352L11.0742 12.8789L6.74998 10.7109L2.42576 12.8789L6.74998 15.0352ZM13.5 15.0234L18.75 12.3984L24 15.0234V21.1992L18.75 23.8242L13.5 21.1992V15.0234ZM18 21.7734V18.1992L15 16.6992V20.2734L18 21.7734ZM22.5 20.2734V16.6992L19.5 18.1992V21.7734L22.5 20.2734ZM18.75 16.8984L21.5742 15.4805L18.75 14.0742L15.9258 15.4805L18.75 16.8984Z"
                                     fill="white" />
                             </svg>
-                            <span class="nav__name button-font">Produk</span>
+                            <span class="nav__name button-font" itemprop="name">Produk</span>
+                            <meta itemprop="position" content="3" />
                         </a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#price" class="nav__link">
+                    <li class="menu__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="#price" class="nav__link" itemprop="item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path class="nav__icon"
                                     d="M11.707 2.293A.997.997 0 0 0 11 2H6a.997.997 0 0 0-.707.293l-3 3A.996.996 0 0 0 2 6v5c0 .266.105.52.293.707l10 10a.997.997 0 0 0 1.414 0l8-8a.999.999 0 0 0 0-1.414l-10-10zM13 19.586l-9-9V6.414L6.414 4h4.172l9 9L13 19.586z">
                                 </path>
                                 <circle class="nav__icon" cx="8.353" cy="8.353" r="1.647"></circle>
                             </svg>
-                            <span class="nav__name button-font">Harga</span>
+                            <span class="nav__name button-font" itemprop="name">Harga</span>
+                            <meta itemprop="position" content="4" />
                         </a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#reviews" class="nav__link">
+                    <li class="menu__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="#reviews" class="nav__link" itemprop="item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path class="nav__icon"
                                     d="M20 22V4c0-1.103-.897-2-2-2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22zM6 10V4h12v14.553l-6-3.428-6 3.428V10z">
@@ -1011,7 +1025,8 @@
                                     d="M15.409 9.512c.361-.372.585-.888.585-1.456s-.223-1.083-.585-1.456a1.962 1.962 0 0 0-1.412-.603S13.001 5.994 12 7.026c-1.001-1.032-1.997-1.029-1.997-1.029-.552 0-1.051.23-1.412.603-.362.373-.585.887-.585 1.456s.223 1.084.585 1.456L12 13.203l3.409-3.691z">
                                 </path>
                             </svg>
-                            <span class="nav__name button-font">Testimoni</span>
+                            <span class="nav__name button-font" itemprop="name">Testimoni</span>
+                            <meta itemprop="position" content="5" />
                         </a>
                     </li>
                 </ul>
@@ -1020,7 +1035,8 @@
             <!--Call to Action Nav-->
             <div id="nav__cta" class="nav__cta">
                 <button type="button" class="nav__btn">
-                    <a href="#" class="btn__link">
+                    <a href="https://wa.me/p/6464333390310645/6283838210077?text=Hai%20Lisa%2C%20Saya%20Mau%20beli%20Kesagi%20Paket%20Hemat%202%20Box.%20Mohon%20bantuannya."
+                        class="btn__link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path class="btn__icon"
                                 d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z">
@@ -1033,7 +1049,8 @@
                 </button>
                 <span class="btn__devide"></span>
                 <button class="nav__btn">
-                    <a href="#" class="btn__link">
+                    <a href="https://wa.me/p/6464333390310645/6283838210077?text=Hai%20Lisa%2C%20Saya%20Mau%20beli%20Kesagi%20Paket%20Hemat%202%20Box.%20Mohon%20bantuannya."
+                        class="btn__link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <path class="btn__icon"
                                 d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z">
@@ -1051,7 +1068,8 @@
 
     <!--=============== Button CTA ===============-->
     <button type="button" class="btn__act">
-        <a href="#" class="btn__link-vert">
+        <a href="https://wa.me/p/6464333390310645/6283838210077?text=Hai%20Lisa%2C%20Saya%20Mau%20beli%20Kesagi%20Paket%20Hemat%202%20Box.%20Mohon%20bantuannya.."
+            class="btn__link-vert">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_705_701)" class="btn__icon-vert">
                     <path
@@ -1158,7 +1176,8 @@
                         </a>
                     </button>
                     <button type="button" class="cta__vert active" title="beli kesagi via wa">
-                        <a href="#" class="cta__link-vert link-active">
+                        <a href="https://wa.me/p/6464333390310645/6283838210077?text=Hai%20Lisa%2C%20Saya%20Mau%20beli%20Kesagi%20Paket%20Hemat%202%20Box.%20Mohon%20bantuannya."
+                            class="cta__link-vert link-active">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 title="whatsapp kesagi">
                                 <path fill-rule="evenodd" clip-rule="evenodd" class="cta__icon icon-active"
@@ -1178,16 +1197,21 @@
         </section>
 
         <!--=============== PRODUCT ===============-->
-    </main>
-
-    <!--=============== FOOTER ===============-->
-    <footer>
-
         <!-- Ref: https://amp.dev/documentation/components/amp-iframe/ -->
         <amp-iframe width="1400px" height="503.328px" sandbox="allow-scripts allow-same-origin" layout="responsive"
             frameborder="0" src="https://widgets.sociablekit.com/google-business-profile/iframe/180635"
             class="widget__gbp">
         </amp-iframe>
+    </main>
+
+
+
+    <!--=============== FOOTER ===============-->
+    <footer>
+        <!-- Ref: https://amp.dev/documentation/components/amp-script/ -->
+        <amp-script layout="container" src="https://widgets.sociablekit.com/google-business-profile/iframe/180635">
+
+        </amp-script>
 
 
 
