@@ -904,8 +904,19 @@
 
 <body>
     <!-- Google Tag Manager -->
-    <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-KQC73X8N"
-        data-credentials="include"></amp-analytics>
+    <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-KQC73X8N&gtm.url=SOURCE_URL"
+        data-credentials="include">
+        <script type="application/json">
+        {
+            "vars" : {
+            "gtag_id": "<G-3TT72PVFR7>",
+            "config" : {
+            "<G-3TT72PVFR7>": { "groups": "default" }
+            }
+        }
+        }
+        </script>
+    </amp-analytics>
 
     <!--=============== HEADER ===============-->
     <header id="header" class="header header__top">
@@ -1209,8 +1220,6 @@
 
     <!--=============== FOOTER ===============-->
     <footer>
-
-
 
     </footer>
 
