@@ -910,35 +910,41 @@
     <!-- https://amp.dev/documentation/components/amp-analytics/ -->
     <amp-analytics type="gtag" id="gtag" config="https://www.googletagmanager.com/gtag/js?id=G-V82HPVPS3D"
         data-credentials="include">
-        <!-- del 
+        <!-- del <script type="application/json"> { "vars": { "gtag_id": "G-V82HPVPS3D",
+            "config": { "G-V82HPVPS3D": { "groups": "default" } } }, "requests": {},
+            "transport": {}, "extraUrlParams": { "": "" }, "triggers": { "TRIGGER_NAME": {
+            "selector": "#SELECTOR_ID", "on": "EVENT", "vars": { "event_name": "", "method":
+            "" } } } } </script> -->
+    </amp-analytics>
+
+    <!-- Google tag (gtag.js) -->
+    <amp-analytics type="gtag" data-credentials="include">
         <script type="application/json">
                 {
                     "vars": {
-                        "gtag_id": "G-V82HPVPS3D",
+                        "gtag_id": "AW-11309379034",
                         "config": {
-                            "G-V82HPVPS3D": {
+                            "AW-11309379034": {
                                 "groups": "default"
                             }
                         }
-                    },
-                    "requests": {},
-                    "transport": {},
-                    "extraUrlParams": {
-                        "": ""
-
+                        
                     },
                     "triggers": {
-                        "TRIGGER_NAME": {
-                            "selector": "#SELECTOR_ID",
-                            "on": "EVENT",
+                        "C_wLEJaS_7HEA": {
+                            "on": "click",
+                            "selector": ".act-wa-right",
                             "vars": {
-                                "event_name": "",
-                                "method": ""
+                                "event_name": "conversion",
+                                "value": 1.0,
+                                "currency": "IDR",
+                                "transaction_id": "",
+                                "send_to": ["AW-11309379034/zX9-CMf77NcYENrb3ZAq"]
                             }
                         }
                     }
                 }
-            </script> -->
+            </script>
     </amp-analytics>
 
     <!--=============== HEADER ===============-->
