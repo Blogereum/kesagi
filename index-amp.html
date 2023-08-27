@@ -902,10 +902,22 @@
 
 <body>
     <!-- Google Tag Manager -->
-    <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-KQC73X8N&gtm.url=SOURCE_URL"
-        data-credentials="include"></amp-analytics>
-
-
+    <amp-analytics type="gtag" config="https://www.googletagmanager.com/amp.json?id=GTM-KQC73X8N&gtm.url=SOURCE_URL"
+        data-credentials="include">
+        <script type="application/json">
+                {
+                    "vars": {
+                        "gtag_id": "GTM-KQC73X8N",
+                        "config": {
+                            "GTM-KQC73X8N": {
+                                "groups": "default"
+                            }
+                        }
+                    },
+                    "triggers": {}
+                }
+            </script>
+    </amp-analytics>
 
     <!--=============== HEADER ===============-->
     <header id="header" class="header header__top">
