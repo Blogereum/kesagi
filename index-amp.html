@@ -901,9 +901,40 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager -->
-    <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-KQC73X8N&gtm.url=SOURCE_URL"
-        data-credentials="include"></amp-analytics>
+    <!-- Google Tag Manager <amp-analytics
+        config="https://www.googletagmanager.com/amp.json?id=GTM-KQC73X8N&gtm.url=SOURCE_URL"
+        data-credentials="include"></amp-analytics> -->
+    <!-- https://amp.dev/documentation/components/amp-analytics/ -->
+    <amp-analytics type="gtag" id="gtag" data-credentials="include">
+        <script type="application/json">
+                {
+                    "vars": {
+                        "gtag_id": "G-V82HPVPS3D",
+                        "config": {
+                            "G-V82HPVPS3D": {
+                                "groups": "default"
+                            }
+                        }
+                    },
+                    "requests": {},
+                    "transport": {},
+                    "extraUrlParams": {
+                        "": ""
+
+                    },
+                    "triggers": {
+                        "TRIGGER_NAME": {
+                            "selector": "#SELECTOR_ID",
+                            "on": "EVENT",
+                            "vars": {
+                                "event_name": "",
+                                "method": ""
+                            }
+                        }
+                    }
+                }
+            </script>
+    </amp-analytics>
 
     <!--=============== HEADER ===============-->
     <header id="header" class="header header__top">
